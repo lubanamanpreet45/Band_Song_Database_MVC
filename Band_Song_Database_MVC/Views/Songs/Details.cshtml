@@ -1,0 +1,42 @@
+﻿@model Band_Song_Database_MVC.Models.Song
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Song</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Album)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Album.AlbumName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MusicBand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MusicBand.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Producer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Producer.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>
